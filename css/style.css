@@ -68,6 +68,10 @@ nav a {
     font-size: 1.1em;
 }
 
+nav a:active {
+  background: none;
+}
+
 .menu-main > li:hover {
     background: rgba(68, 68, 68, 0.9);
     border-top-left-radius: 7px;
