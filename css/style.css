@@ -629,8 +629,10 @@ main {
 }
 
 .sub-description {
-    width: clamp(230px, 35vw, 450px);
+    flex: 1 1 20em;
+    width: clamp(240px, 40vw, 450px);
     opacity: 0;
+    margin: .5em;
     transition: transform .3s ease-in-out, opacity .2s ease-in-out;
 }
 
