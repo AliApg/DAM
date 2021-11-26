@@ -500,6 +500,7 @@ main.english {
 
 .information {
     flex: 1 1 20em;
+    max-width: 25em;
     background: #283149ce;
     padding: 1.5em;
     border-radius: 5px;
