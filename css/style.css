@@ -81,6 +81,11 @@ nav ul {
     justify-content: center;
 }
 
+
+.menu-main.english {
+    flex-direction: row;
+}
+
 nav li {
     display: inline-block;
     margin-top: 0.2em;
