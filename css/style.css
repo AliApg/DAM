@@ -89,7 +89,7 @@ nav li {
 nav.english > div > ul > li {
     padding-top: .6em;
     font-weight: bold;
-    height: 3.4em;
+    min-height: 3.4em;
     margin-bottom: -.1em;
     padding-bottom: .1em;
 }
@@ -759,6 +759,7 @@ footer h4 {
         top: 0;
         background: #DBEDF3;
         transform: translateX(103%);
+        overflow-y: auto;
     }
 
     .container {
@@ -770,7 +771,6 @@ footer h4 {
         right: 0;
         top: 0;
         overflow-x: hidden;
-        overflow-y: auto;
     }
 
     .menu-main {
@@ -783,6 +783,10 @@ footer h4 {
         border: none;
         box-shadow: none;
     }
+
+    nav.english .menu-sub {
+    top: 0;
+}
 
     .menu-sub {
         position: relative;
