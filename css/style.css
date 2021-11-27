@@ -39,8 +39,6 @@ body {
     max-width: 100vw;
 }
 
-/* Start of Navigation Bar */
-
 nav {
     position: fixed;
     width: 100%;
@@ -330,10 +328,6 @@ nav li:hover .cols {
     transform: scale(0.5);
 }
 
-/* End of Navigation Bar */
-
-/* Start of Main */
-
 main {
     width: 100%;
     z-index: -1;
@@ -382,11 +376,6 @@ main.english {
     user-select: none;
     border-radius: 5px;
     color: #fff;
-    background: #03e9f4;
-    box-shadow: 0 0 5px #03e9f4,
-                0 0 25px #03e9f4,
-                0 0 50px #03e9f4,
-                0 0 100px #03e9f4;
     animation: anim1 5s ease-in-out infinite;
 }
 
@@ -420,6 +409,7 @@ main.english {
 
 @keyframes anim2 {
     0%, 100% {
+        background: #03e9f4;
         box-shadow: 0 0 5px #03e9f4,
                 0 0 10px #03e9f4,
                 0 0 15px #03e9f4,
@@ -778,8 +768,7 @@ footer h4 {
         overflow-x: hidden;
     }
 
-    .menu-main {
-        display: flex;
+    .menu-main.english, .menu-main {
         flex-direction: column;
     }
 
