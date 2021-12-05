@@ -29,7 +29,7 @@
 }
 
 ::selection {
-    background-color: #FFE194;
+    background-color: #ffe194;
     color: #3B0000;
     text-shadow: 1px 1px 5px #444;
 }
@@ -76,6 +76,10 @@ body {
     background:#283149;
     max-width: 100vw;
 }
+
+/* ================================================================= */
+/* ============================Nav Start============================ */
+/* ================================================================= */
 
 nav {
     position: fixed;
@@ -366,6 +370,115 @@ nav li:hover .cols {
     transform: scale(0.5);
 }
 
+@supports (backdrop-filter: blur(5px)) {
+
+    .container {
+        backdrop-filter: blur(5em);
+        background: linear-gradient(90deg, rgba(0, 46, 41, 0.4), rgba(96, 128, 124, 0.4), rgba(0, 46, 41, 0.4));
+    }
+
+    #nav_icon4 {
+        backdrop-filter: blur(5em);
+    }
+
+}
+
+@media (min-width : 51em) {
+
+    .container.scrolled {
+        background: linear-gradient(90deg, #00393df8, #00818af8, #00393df8);
+    }
+
+}
+
+@media (max-width : 51em) {
+
+    #nav-icon4 {
+        display: block;
+    }
+
+    nav.clicked {
+        transform: translateX(0);
+    }
+
+    ::-webkit-scrollbar{
+        width: 0;
+    }
+
+    nav {
+        transition: transform .5s ease-in-out;
+        position: fixed;
+        width: 80%;
+        height: 100%;
+        right: 0;
+        top: 0;
+        background: #DBEDF3;
+        transform: translateX(103%);
+        overflow-y: auto;
+    }
+
+    .container {
+        background: #00818A;
+        position: absolute;
+        padding: .5em;
+        width: 92%;
+        height: 100%;
+        right: 0;
+        top: 0;
+        overflow-x: hidden;
+    }
+
+    .menu-main.english, .menu-main {
+        flex-direction: column;
+    }
+
+    .menu-main > li:hover {
+        background: transparent;
+        border: none;
+        box-shadow: none;
+    }
+
+    nav.english .menu-sub {
+    top: 0;
+}
+
+    .menu-sub {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        height: 0;
+        background: transparent;
+        border: none;
+        box-shadow: none;
+        transform-origin: top center;
+        transition: all 0s;
+    }
+
+    .cols {
+        transform-origin:  top center;
+    }
+
+    .menu-main > li:focus, .menu-main > li:hover .menu-sub {
+        height: 100%;
+        padding-bottom: 0;
+    }
+
+    #language {
+        top: .7em;
+    }
+
+}
+
+/* ================================================================= */
+/* =============================Nav End============================= */
+/* ================================================================= */
+
+
+
+/* ================================================================= */
+/* ===========================Opener Start=========================== */
+/* ================================================================= */
+
 main {
     width: 100%;
     z-index: -1;
@@ -390,6 +503,7 @@ main.english {
     display: flex;
     justify-content: center;
     position: relative;
+    z-index: 1;
 }
 
 .project .Prjct {
@@ -397,24 +511,25 @@ main.english {
     justify-content: center;
     align-items: center;
     text-align: center;
-    width: 50vw;
+    width: 55vw;
     max-width: 11em;
     height: 10vh;
     max-height: 6em;
+    min-height: 2em;
     font-family: myFirstFont;
     font-weight: 900;
     position: relative;
     padding: .3em 10% 1em;
     font-size: clamp(.6rem, 5vw, 2rem);
     text-decoration: none;
-    overflow: hidden;
+    /* overflow: hidden; */
     margin-top: 82vh;
     word-spacing: .4em;
     user-select: none;
-    border-radius: 5px;
     color: #fff;
-    transition: .25s ease-in-out;
-    animation: anim1 3s ease-in-out infinite;
+    transition: all .25s ease-in-out;
+    text-shadow: .02em .02em .07em #444;
+
 }
 
 .project.english .Prjct {
@@ -424,54 +539,59 @@ main.english {
 
 .project .Prjct:hover {
     transform: scale(1.025);
+    background: #03e8f4;
+    border-radius: .2em;
+    text-shadow: .05em .05em .2em #444;
+}
+
+.Prjct:hover::before, .Prjct:hover::after {
     animation-play-state: paused;
     animation: anim2 3s ease-in-out infinite;
 }
 
 .project .Prjct:active {
     transform: scale(1.01);
+    transition: scale 50ms ease-in-out;
 }
 
-/*
-.Prjct::before {
+.Prjct::before, .Prjct::after {
     content: '';
     position: absolute;
     inset: 0;
-    background: #fff;
-    box-shadow: 20px 20px 20px 20px #fff;
-} */
+    border-radius: .2em;
+    z-index: -1;
+    animation: anim1 3s ease-in-out infinite;
+}
+
+.Prjct::before {
+    background: #03e8f4;
+}
+
+.Prjct::after {
+    box-shadow: inset 0 0 1em 2em #03e9f4,
+                0 0 .2em #03e9f4,
+                0 0 .7em #03e9f4,
+                0 0 1.5em #03e9f4,
+                0 0 3em #03e9f4;
+}
 
 @keyframes anim1 {
     0%, 100% {
-        background: #03e8f4fa;;
-        box-shadow: 0 0 5px #03e9f4,
-                0 0 25px #03e9f4,
-                0 0 50px #03e9f4,
-                0 0 100px #03e9f4;
+        opacity: .9;
     }
 
     50% {
-        background: #03e8f444;
-        box-shadow: 0 0 5px #03e8f400,
-                0 0 25px #03e8f400,
-                0 0 50px #03e8f400,
-                0 0 100px #03e8f400;
+        opacity: .17;
     }
 }
 
 @keyframes anim2 {
     0%, 100% {
-        background: #03e9f4;
-        box-shadow: 0 0 5px #03e9f4,
-                0 0 10px #03e9f4,
-                0 0 15px #03e9f4,
-                0 0 25px #03e9f4;
+        opacity: 1;
     }
+
     50% {
-       box-shadow: 0 0 5px #03e9f4,
-                0 0 25px #03e9f4,
-                0 0 50px #03e9f4,
-                0 0 100px #03e9f4;
+        opacity: .3;
     }
 }
 
@@ -497,6 +617,7 @@ main.english {
     background-size: cover;
     background-position: center;
     background-blend-mode: overlay;
+    cursor: pointer;
 }
 
 #language.english {
@@ -509,6 +630,7 @@ main.english {
 #language:hover {
     --blend: #141e613b;
     transform: scale(1.07);
+    box-shadow: 0 0 .6em rgba(255, 255, 255, 0.644);
 }
 
 #up {
@@ -529,7 +651,6 @@ main.english {
     transform: translateX(150%) rotate(-180deg);
     transition: transform 400ms ease-in-out;
     cursor: pointer;
-    z-index: 1;
 }
 
 #up i {
@@ -546,6 +667,16 @@ main.english {
 #up.scrolled:hover {
     background: #ffc413;
 }
+
+/* ================================================================= */
+/* ===========================Opener End=========================== */
+/* ================================================================= */
+
+
+
+/* ================================================================= */
+/* ===========================Index Start=========================== */
+/* ================================================================= */
 
 .welcome {
     width: 100%;
@@ -698,6 +829,15 @@ main.english {
     direction: ltr;
 }
 
+/* ================================================================= */
+/* ============================Index End============================ */
+/* ================================================================= */
+
+
+/* ================================================================= */
+/* ==========================Footer Start=========================== */
+/* ================================================================= */
+
 footer {
     font-size: 1.3em;
     font-family: myFourthFont;
@@ -808,103 +948,104 @@ footer h4 {
     text-shadow: 0 0 25px currentColor;
     cursor: pointer;
 }
+/* ================================================================= */
+/* ==========================Footer End=========================== */
+/* ================================================================= */
 
 
-@supports (backdrop-filter: blur(5px)) {
 
-    .container {
-        backdrop-filter: blur(5em);
-        background: linear-gradient(90deg, rgba(0, 46, 41, 0.4), rgba(96, 128, 124, 0.4), rgba(0, 46, 41, 0.4));
-    }
+/* ================================================================ */
+/* ===========================Team Start=========================== */
+/* ================================================================ */
 
-    #nav_icon4 {
-        backdrop-filter: blur(5em);
-    }
 
+:root {
+    --level-one: translateZ(3rem);
+    --level-two: translateZ(6rem);
+    --level-three: translateZ(9rem);
+    --fw-normal: 400;
+    --fw-bold: 700;
+    --clr: #b7c9e5;
 }
 
-@media (min-width : 51em) {
-
-    .container.scrolled {
-        background: linear-gradient(90deg, #00393df8, #00818af8, #00393df8);
-    }
-
+.card {
+    font-family: "Oswald";
+    width: 400px;
 }
 
-@media (max-width : 51em) {
+.card__content {
+    text-align: center;
+    position: relative;
+    padding: 15em 5em;
+    transition: transform 3s;
+    transform-style: preserve-3d;
+}
 
-    #nav-icon4 {
-        display: block;
-    }
+.card:hover .card__content {
+    transform: rotateY(.5turn);
+}
 
-    nav.clicked {
-        transform: translateX(0);
-    }
-
-    ::-webkit-scrollbar{
-        width: 0;
-    }
-
-    nav {
-        transition: transform .5s ease-in-out;
-        position: fixed;
-        width: 80%;
-        height: 100%;
-        right: 0;
-        top: 0;
-        background: #DBEDF3;
-        transform: translateX(103%);
-        overflow-y: auto;
-    }
-
-    .container {
-        background: #00818A;
-        position: absolute;
-        padding: .5em;
-        width: 92%;
-        height: 100%;
-        right: 0;
-        top: 0;
-        overflow-x: hidden;
-    }
-
-    .menu-main.english, .menu-main {
-        flex-direction: column;
-    }
-
-    .menu-main > li:hover {
-        background: transparent;
-        border: none;
-        box-shadow: none;
-    }
-
-    nav.english .menu-sub {
+.card__front,
+.card__back {
+    position: absolute;
     top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 5em 3em;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    display: grid;
+    align-content: center;
 }
 
-    .menu-sub {
-        position: relative;
-        display: flex;
-        flex-wrap: wrap;
-        height: 0;
-        background: transparent;
-        border: none;
-        box-shadow: none;
-        transform-origin: top center;
-        transition: all 0s;
-    }
-
-    .cols {
-        transform-origin:  top center;
-    }
-
-    .menu-main > li:focus, .menu-main > li:hover .menu-sub {
-        height: 100%;
-        padding-bottom: 0;
-    }
-
-    #language {
-        top: .7em;
-    }
-
+.card__front {
+    background-color: var(--clr);
+    background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/308367/fair.jpg);
+    background-size: cover;
+    background-blend-mode: overlay;
+    color: #333;
 }
+
+.card__front::before {
+    content: '';
+    position: absolute;
+    inset: 1em;
+    border: 3px solid currentColor;
+    transform: var(--level-one);
+}
+
+.card__title {
+    font-size: 3.5rem;
+    transform: var(--level-three);
+    order: 2;
+    text-transform: uppercase;
+}
+
+.card__subtitle {
+    transform: var(--level-two);
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: .75rem;
+    font-weight: var(--fw-bold);
+    opacity: .7;
+}
+
+.card__body {
+    transform: var(--level-two);
+    font-weight: var(fw-normal);
+    font-size: 1.5rem;
+    line-height: 1.6;
+    }
+
+
+
+.card__back {
+    transform: rotateY(.5turn);
+    color: var(--clr);
+    background: #333;
+}
+
+/* ================================================================ */
+/* ===========================Team End=========================== */
+/* ================================================================ */
