@@ -479,10 +479,6 @@ nav li:hover .cols {
         padding-bottom: 0;
     }
 
-    #language {
-        top: .7em;
-    }
-
 }
 
 /* ================================================================= */
@@ -647,6 +643,15 @@ main.english {
     --blend: #141e613b;
     transform: scale(1.07);
     box-shadow: 0 0 .6em rgba(255, 255, 255, 0.644);
+}
+
+
+@media (max-width : 51em) {
+
+    #language {
+        top: .7em;
+    }
+
 }
 
 #up {
