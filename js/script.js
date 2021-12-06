@@ -15,6 +15,14 @@ const upRef = document.querySelector(".up-ref")
 const lan = document.querySelector("#language")
 const lanRef = document.querySelector("#lan")
 
+up.addEventListener("click", () => {
+    upRef.click();
+})
+
+lan.addEventListener("click", () => {
+    lanRef.click();
+})
+
 const openerPicOptions = {
     rootMargin: "-70px 0px 0px 0px"
 };
@@ -32,14 +40,6 @@ const openerPicObserver = new IntersectionObserver( function (entries, openerPic
 }, openerPicOptions);
 
 openerPicObserver.observe(openerPic);
-
-up.addEventListener("click", () => {
-    upRef.click();
-})
-
-lan.addEventListener("click", () => {
-    lanRef.click();
-})
 
 const slider = document.querySelectorAll(".information")
 const fader = document.querySelectorAll(".sub-description");
