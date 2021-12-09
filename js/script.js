@@ -7,7 +7,7 @@ btn.addEventListener("click", () => {
 });
 
 const navBar = document.querySelector(".container");
-const openerPic = document.querySelector(".opener-pic");
+const start = document.querySelector(".start");
 
 const up = document.querySelector("#up")
 const upRef = document.querySelector(".up-ref")
@@ -24,7 +24,8 @@ lan.addEventListener("click", () => {
 })
 
 const openerPicOptions = {
-    rootMargin: "-70px 0px 0px 0px"
+    rootMargin: "-140px 0px 0px 0px"
+    // threshold: .1
 };
 
 const openerPicObserver = new IntersectionObserver( function (entries, openerPicObserver) {
@@ -39,12 +40,12 @@ const openerPicObserver = new IntersectionObserver( function (entries, openerPic
     })
 }, openerPicOptions);
 
-openerPicObserver.observe(openerPic);
+openerPicObserver.observe(start);
 
-const slider = document.querySelectorAll(".information")
-const fader = document.querySelectorAll(".sub-description");
+const fader = document.querySelectorAll(".information")
+const slider = document.querySelectorAll(".sub-description");
+
 const faderOptions = {
-
     rootMargin: "0px 0px -15% 0px"
 };
 
