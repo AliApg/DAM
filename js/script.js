@@ -24,7 +24,7 @@ lan.addEventListener("click", () => {
 })
 
 const openerPicOptions = {
-    rootMargin: "-140px 0px 0px 0px"
+    rootMargin: "-70px 0px 0px 0px"
     // threshold: .1
 };
 
