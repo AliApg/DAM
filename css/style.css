@@ -222,6 +222,10 @@ nav li:hover > a{
     transform: scale(.9);
 }
 
+.menu-main li:nth-child(n+4) a {
+    cursor:default;
+}
+
 .menu-sub {
     gap: 1.2em;
     opacity: 0;
@@ -251,6 +255,13 @@ nav li:hover > a{
                 );
 }
 
+nav li:hover .menu-sub, nav li:focus .menu-sub {
+    opacity: 1;
+    padding: .9em .2em;
+    transform: scale(1);
+    pointer-events: auto;
+}
+
 hr {
     color: #fff;
     background-color: #fff;
@@ -262,22 +273,8 @@ hr {
     text-shadow: 0 0 .3em #bebebe;
 }
 
-nav li:hover .menu-sub {
-    opacity: 1;
-    padding: .9em .2em;
-    transform: scale(1);
-    pointer-events: auto;
-}
-
-nav li:hover .cols {
-    transform: scale(1);
-}
-
 .cols {
     width: 7em;
-    transform: scale(0);
-    transform-origin: top left;
-    transition: all .25s ease-in;
 }
 
 .cols.english {
