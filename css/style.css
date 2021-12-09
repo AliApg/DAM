@@ -507,7 +507,7 @@ nav li:hover .cols {
 
     .menu-sub {
         height: 0;
-        border: none;
+        outline: none;
         display: flex;
         flex-wrap: wrap;
         font-size: 1.1em;
