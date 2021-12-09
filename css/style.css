@@ -145,9 +145,9 @@ nav.english {
     padding: 0 2em;
     align-items: center;
     justify-content: center;
+    box-shadow: 0 0 5em #00000099;
     border-bottom-left-radius: min(2.5em, 4vw);
     border-bottom-right-radius: min(2.5em, 4vw);
-    box-shadow: 0 0 5em rgba(0, 0, 0, 0.6);
     background: linear-gradient(
         90deg,
         #002e29e6,
@@ -179,9 +179,9 @@ nav li {
 }
 
 nav.english > div > ul > li > a {
-    padding-top: 1em;
     font-weight: bold;
-    padding-bottom: 1em;
+    padding-top: 1.12em;
+    padding-bottom: 1.12em;
 }
 
 nav a {
@@ -192,7 +192,7 @@ nav a {
     padding: .2em 1.75em .75em;
     text-shadow: 1px 1px 3px #444;
     transition: all .25s ease-in-out;
-    font-size: 1.3rem;
+    font-size: clamp(.8rem, 2vw, 1.3rem);
 }
 
 nav li:hover > a{
@@ -219,7 +219,7 @@ nav li:hover > a{
 .menu-main > li:hover > a::after {
     left: 0;
     width: 100%;
-    transform: scale(.91);
+    transform: scale(.9);
 }
 
 .menu-sub {
@@ -233,14 +233,15 @@ nav li:hover > a{
     transform: scale(0);
     align-items: center;
     pointer-events: none;
+    outline-offset: -.055em;
     justify-content: center;
     transform-origin: top left;
     border-top-right-radius: 2em;
-    font-size: 1.1em;
+    outline: .11em solid #ffffff80;
     transition: all .25s ease-in-out;
     border-bottom-left-radius: 1.2em;
     border-bottom-right-radius: 1.2em;
-    border-left: .05em solid #00697080;
+    font-size: clamp(.7em, 2vw, 1.1em);
     box-shadow: .3em .3em .7em -.3em hsla(0, 0%, 0%, 0.4);
     background: linear-gradient(
                 45deg,
@@ -263,7 +264,7 @@ hr {
 
 nav li:hover .menu-sub {
     opacity: 1;
-    padding: 1em;
+    padding: .9em .2em;
     transform: scale(1);
     pointer-events: auto;
 }
@@ -287,6 +288,10 @@ nav li:hover .cols {
     margin-top: 1em;
 }
 
+.cols ul li {
+    line-height: 1.5;
+}
+
 .menu-sub li {
     display: block;
 }
@@ -294,12 +299,12 @@ nav li:hover .cols {
 .menu-sub a{
     padding: 0;
     font-size: .9em;
-    margin-bottom: 1em;
+    margin-bottom: .75em;
     text-shadow: .1em .1em .4em #ffffffbf;
 }
 
 .menu-sub a:hover {
-    transform: scale(1.15);
+    transform: scale(1.07);
     color: hsl(180, 48%, 90%);
     text-shadow: 0em .05em .3em #fff;
     text-decoration: underline #9fdddd;
@@ -311,9 +316,10 @@ nav li:hover .cols {
 }
 
 .eng {
+    line-height: .4;
     margin-top: 1.5em;
     font-weight: bold;
-    letter-spacing: .11em;
+    letter-spacing: .05em;
     font-family: mySecondFont;
 }
 
@@ -409,7 +415,7 @@ nav li:hover .cols {
     transform: scale(0.55);
 }
 
-@media (min-width : 35rem) {
+@media (min-width : 38rem) {
 
     @supports (backdrop-filter: blur(5px)) {
 
@@ -440,7 +446,7 @@ nav li:hover .cols {
 
 }
 
-@media (max-width : 35rem) {
+@media (max-width : 38rem) {
 
     #nav-icon4 {
         display: block;
@@ -466,6 +472,10 @@ nav li:hover .cols {
         border-top-left-radius: 4vw;
         border-bottom-right-radius: 0;
         transition: transform .5s ease-in-out;
+    }
+
+    nav a {
+        font-size: 1.3em;
     }
 
     .container {
@@ -500,6 +510,7 @@ nav li:hover .cols {
         border: none;
         display: flex;
         flex-wrap: wrap;
+        font-size: 1.1em;
         box-shadow: none;
         transition: all 0s;
         position: relative;
@@ -571,18 +582,18 @@ main.english {
     text-align: center;
     position: relative;
     align-items: center;
-    padding: .3em 10% 1em;
+    padding: .9em 7% 1.6em;
     text-decoration: none;
     justify-content: center;
     font-family: myFirstFont;
     transition: all .25s ease-in-out;
-    font-size: clamp(.6rem, 5vw, 2rem);
+    font-size: clamp(1.2rem, 3vw, 2rem);
     text-shadow: .02em .02em .07em #444;
 
 }
 
 .project.english .Prjct {
-    padding-top: .8em;
+    padding-top: 1.4em;
     font-family: mySecondFont;
 }
 
@@ -654,7 +665,6 @@ main.english {
 
 #language{
     background-image: url(../img/en.png);
-    top: 3em;
     left: .7em;
     width: 2em;
     height: 2em;
@@ -670,6 +680,7 @@ main.english {
     justify-content: center;
     background-position: center;
     background-repeat: no-repeat;
+    top: clamp(2.5em, 9vw, 3.4em);
     background-color: var(--blend);
     background-blend-mode: overlay;
     transition: transform 50ms ease-in;
@@ -690,7 +701,7 @@ main.english {
     box-shadow: 0 0 .6em rgba(255, 255, 255, 0.644);
 }
 
-@media (max-width : 35rem) {
+@media (max-width : 38rem) {
 
     #language {
         top: .7em;
@@ -700,9 +711,9 @@ main.english {
 
 #up {
     width: 2em;
+    z-index: 2;
     right: .7em;
     height: 2em;
-    z-index: 10;
     bottom: .7em;
     display: flex;
     cursor: pointer;
@@ -716,7 +727,7 @@ main.english {
     font-size: clamp(1.1em, 4vw, 1.7em);
     transition: transform 400ms ease-in-out;
     box-shadow: .05em .05em .2em #1414146c,
-                inset .1em .1em .3em #14141480;
+                inset .1em .1em .5em #14141495;
     transform: translateX(150%) rotate(-180deg);
 }
 
@@ -1076,7 +1087,7 @@ main.team .opener-pic {
     background-position: center;
 }
 
-@media (max-width : 35rem) {
+@media (max-width : 38rem) {
 
     main.team .opener-pic {
         padding-top: .8em;
@@ -1166,7 +1177,7 @@ main.team .opener-pic {
     border-radius: var(--radius);
     transform-style: preserve-3d;
     justify-content: space-around;
-    box-shadow: .5em .5em 2em rgba(0, 0, 0, 0.6);
+    box-shadow: .5em .5em 1.2em rgba(0, 0, 0, 0.45);
 }
 
 .card__front {
