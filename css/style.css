@@ -192,17 +192,8 @@ nav a {
     padding: .2em 1.75em .75em;
     text-shadow: 1px 1px 3px #444;
     transition: all .25s ease-in-out;
-    font-size: clamp(.7rem, 2vw, 1.3rem);
+    font-size: 1.3rem;
 }
-
-/* .menu-main > li:hover {
-    border-bottom: none;
-    background: #283149;
-    border-top-left-radius: 1.7em;
-    border-top-right-radius: 1.7em;
-    border: .05em solid #ffffff4d;
-    box-shadow: 0 .05em .3em #000000b3;
-} */
 
 nav li:hover > a{
     color: #fff;
@@ -232,20 +223,20 @@ nav li:hover > a{
 }
 
 .menu-sub {
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     gap: 1.2em;
     opacity: 0;
     z-index: 99;
     color: #fff;
+    display: flex;
     flex-basis: 100%;
+    position: absolute;
     transform: scale(0);
+    align-items: center;
     pointer-events: none;
+    justify-content: center;
     transform-origin: top left;
     border-top-right-radius: 2em;
-    font-size: clamp(.7em, 2vw, 1em);
+    font-size: 1.1em;
     transition: all .25s ease-in-out;
     border-bottom-left-radius: 1.2em;
     border-bottom-right-radius: 1.2em;
