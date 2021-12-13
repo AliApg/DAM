@@ -514,8 +514,8 @@ hr {
         flex-wrap: wrap;
         font-size: 1.1em;
         border-radius: 0;
-        padding-left: 1em;
-        padding-right: 1em;
+        padding-left: 1.4em;
+        padding-right: 1.4em;
         position: relative;
         transform: scaleX(1);
         background: #81b7b9;
@@ -534,7 +534,7 @@ hr {
     .menu-main > li:focus .menu-sub,
     .menu-main > li:hover .menu-sub {
         height: auto;
-        margin-top: .5em;
+        margin: .5em 0 0;
         padding: 1em auto;
     }
 
