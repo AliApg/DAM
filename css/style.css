@@ -494,7 +494,7 @@ hr {
     }
 
     .menu-main > li {
-        width: 110%;
+        width: 100%;
     }
 
     .menu-main > li:hover {
@@ -515,6 +515,8 @@ hr {
         font-size: 1.1em;
         border-radius: 0;
         position: relative;
+        padding-left: 2.1em;
+        padding-right: 2.1em;
         transform: scaleX(1);
         background: #81b7b9;
         transform-origin: top center;
