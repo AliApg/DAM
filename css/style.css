@@ -143,7 +143,7 @@ nav.english {
     display: flex;
     margin: 0 auto;
     padding: 0 2em;
-    align-items: center;
+    align-items: top center;
     justify-content: center;
     box-shadow: 0 0 5em #00000099;
     border-bottom-left-radius: min(2.5em, 4vw);
@@ -165,7 +165,7 @@ nav.english {
     position: relative;
     text-align: center;
     align-items: center;
-    justify-content: center;
+    justify-content: top center;
     flex-direction: row-reverse;
 }
 
@@ -219,7 +219,7 @@ nav li:hover > a{
 .menu-main > li:hover > a::after {
     left: 0;
     width: 100%;
-    transform: scale(.9);
+    transform: scale(.92);
 }
 
 .menu-main li:nth-child(n+4) a {
@@ -490,6 +490,11 @@ hr {
 
     .menu-main.english, .menu-main {
         flex-direction: column;
+        padding-top: 2em;
+    }
+
+    .menu-main > li {
+        width: 107%;
     }
 
     .menu-main > li:hover {
@@ -499,8 +504,8 @@ hr {
     }
 
     nav.english .menu-sub {
-    top: 0;
-}
+        top: 0;
+    }
 
     .menu-sub {
         height: 0;
@@ -508,20 +513,32 @@ hr {
         display: flex;
         flex-wrap: wrap;
         font-size: 1.1em;
-        box-shadow: none;
-        transition: all 0s;
+        border-radius: 0;
         position: relative;
-        background: transparent;
+        transform: scaleX(1);
+        background: #81b7b9;
         transform-origin: top center;
+        transition: all .25s ease-in-out ,opacity .35s ease-in;
+        box-shadow: inset 0 2em 1em -2em rgba(68, 68, 68, 0.85),
+                    inset 0 -2em 1em -2em rgba(68, 68, 68, 0.85);
     }
 
     .cols {
-        transform-origin:  top center;
+        transform-origin: top center;
+        transform: scaleY(0);
+        transition: transform .2s ease-in;
     }
 
-    .menu-main > li:focus, .menu-main > li:hover .menu-sub {
-        height: 100%;
-        padding-bottom: 0;
+    .menu-main > li:focus .menu-sub,
+    .menu-main > li:hover .menu-sub {
+        height: auto;
+        margin-top: .5em;
+        padding: 1em auto;
+    }
+
+    .menu-main > li:focus .cols,
+    .menu-main > li:hover .cols {
+        transform: scaleY(1);
     }
 
 }
@@ -721,17 +738,17 @@ main.english {
     align-items: center;
     background: #ffd34f;
     justify-content: center;
-    font-size: clamp(1.1em, 4vw, 1.7em);
+    font-size: clamp(1.35rem, 4vw, 1.7rem);
     transition: transform 400ms ease-in-out;
     box-shadow: .05em .05em .2em #1414146c,
-                inset .1em .1em .5em #14141495;
+                inset .1em .1em .5em hsla(0, 0%, 8%, 0.42);
     transform: translateX(150%) rotate(-180deg);
 }
 
 #up i {
     font-weight: bold;
     color: rgb(241, 241, 241);
-    text-shadow: .05em .05em .2em rgba(68, 68, 68, 0.877);
+    text-shadow: .05em .05em .2em rgba(68, 68, 68, 0.6);
 }
 
 #up.scrolled {
@@ -1051,6 +1068,7 @@ footer h4 {
 /* ================================================================ */
 
 :root {
+    --time: 1.5s;
     --radius: .5em;
     --fw-bold: 700;
     --fw-normal: 400;
@@ -1058,7 +1076,6 @@ footer h4 {
     --level-one: translateZ(4rem);
     --level-two: translateZ(7rem);
     --level-three: translateZ(9rem);
-    --time: 1.5s;
 }
 
 main.team {
