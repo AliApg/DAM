@@ -491,6 +491,7 @@ hr {
     .menu-main.english, .menu-main {
         flex-direction: column;
         padding-top: 2em;
+        width: 100%;
     }
 
     .menu-main > li {
@@ -521,8 +522,8 @@ hr {
         background: #81b7b9;
         transform-origin: top center;
         transition: all .15s ease-in-out;
-        box-shadow: inset 0 2em 1em -2em rgba(68, 68, 68, 0.85),
-                    inset 0 -2em 1em -2em rgba(68, 68, 68, 0.85);
+        box-shadow: inset 0 2.4em 1.3em -2.5em #000000,
+                    inset 0 -2.3em 1.3em -2.5em #000000;
     }
 
     .cols {
