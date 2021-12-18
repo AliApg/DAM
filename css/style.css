@@ -238,7 +238,7 @@ nav li:hover > a{
 
 .menu-sub {
     gap: 1.2em;
-    /* opacity: 0; */
+    opacity: 0;
     z-index: 99;
     color: #fff;
     display: flex;
@@ -519,7 +519,7 @@ header.english .click {
 
     .menu-sub {
         height:0;
-        /* opacity: 0; */
+        opacity: 1;
         outline: none;
         display: flex;
         flex-wrap: wrap;
