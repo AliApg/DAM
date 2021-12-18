@@ -9,7 +9,7 @@ btn.addEventListener("click", () => {
 });
 
 $('.menu-main li').hover(function () {
-    $('.menu-sub', this).toggleClass('open', 250);
+    $('.menu-sub', this).toggleClass('open', 350);
 });
 
 close.addEventListener("click", () => {
