@@ -1445,7 +1445,7 @@ main.project .opener-pic {
     justify-content: center;
     font-family: MyFirstFont;
     width: clamp(10em,80vw,25em);
-    font-size: clamp(1.2rem,6vw,1.7rem);
+    font-size: clamp(1.2rem,6vw,1.5rem);
     text-shadow: .09em .09em .12em #000;
 }
 
@@ -1514,9 +1514,9 @@ main.english #fs-frm-inputs {
     font-family: MyFirstFont;
     background-color: #EEF2FF;
     border: 1px solid #1A374D;
-    font-size: clamp(1rem,5vw,1.7rem);
+    font-size: clamp(1rem,5vw,1.5rem);
     transition: color .3s ease-in-out,
-    background-color .2s ease-in-out;
+                background-color .2s ease-in-out;
     box-shadow: .2em .2em .7em hsl(0, 0%, 0%, .8);
     text-shadow: .05em .05em .1em hsl(206, 50%, 20%, .7);
 }
@@ -1537,7 +1537,7 @@ main.english #fs-frm-inputs {
 main.english #fs-frm > input {
     height: 2.5em;
     padding: .3em;
-    font-size: clamp(1.2rem,6vw,1.7rem);
+    font-size: clamp(1.2rem,6vw,1.5rem);
 }
 
 main.english #fs-frm > input,
