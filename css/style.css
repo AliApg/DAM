@@ -1435,6 +1435,7 @@ main.project .opener-pic {
 #fs-frm-inputs {
     border: none;
     display: flex;
+    direction: rtl;
     color: #EEF2FF;
     font-weight: bold;
     user-select: none;
@@ -1442,10 +1443,15 @@ main.project .opener-pic {
     align-items: center;
     flex-direction: column;
     justify-content: center;
-    font-family: MySecondFont;
+    font-family: MyFirstFont;
     width: clamp(10em,80vw,25em);
     font-size: clamp(1.2rem,6vw,1.7rem);
     text-shadow: .09em .09em .12em #000;
+}
+
+main.english #fs-frm-inputs {
+    direction: ltr;
+    font-family: MySecondFont;
 }
 
 #fs-frm-inputs input,
@@ -1455,14 +1461,13 @@ main.project .opener-pic {
     margin: .4em 0;
     color: #1A374D;
     border-radius: .3em;
-    font-family: MySecondFont;
+    font-family: MyFourthFont;
     background-color: #EEF2FF;
     width: clamp(10em,80vw,25em);
     font-size: clamp(1.2rem,6vw,1.7rem);
     text-shadow: .07em .07em .12em #1A374D;
     border: 1px solid hsla(0, 0%, 0%, 0.7);
     box-shadow: .2em .2em .7em hsl(0, 0%, 0%, .8);
-
 }
 
 #fs-frm-inputs input:hover,
@@ -1484,6 +1489,10 @@ main.project .opener-pic {
     resize: vertical;
 }
 
+#fs-frm-inputs textarea::-webkit-scrollbar{
+    width: 0;
+}
+
 #fs-frm-inputs input::placeholder,
 #fs-frm-inputs textarea::placeholder {
     color: #B1D0E0;
@@ -1495,23 +1504,25 @@ main.project .opener-pic {
 
 #fs-frm > input {
     width: 100%;
-    height: 2.5em;
-    padding: .3em;
+    height: .4em;
+    padding: 0 0 3.1em;
     margin: .5em 0;
     color: #1A374D;
     font-weight: bold;
     border-radius: .3em;
-    font-family: MySecondFont;
+    font-family: MyFirstFont;
     background-color: #EEF2FF;
     border: 1px solid #1A374D;
     font-size: clamp(1.2rem,6vw,1.7rem);
-    transition: background-color .2s ease-in-out,
-                color  .3s ease-in-out;
     text-shadow: .07em .07em .15em #1A374D;
+    transition: color .3s ease-in-out,
+                background-color .2s ease-in-out;
     box-shadow: .2em .2em .7em hsl(0, 0%, 0%, .8);
 }
 
-#fs-frm > input:hover {
+#fs-frm > input:hover,
+#fs-frm > input:focus {
+    outline: none;
     color: #EEF2FF;
     background-color: #1B1B2F;
     text-shadow: .07em .07em .15em #EEF2FF;
@@ -1520,6 +1531,20 @@ main.project .opener-pic {
 
 #fs-frm > input:active {
     background-color: #2d2d49;
+}
+
+main.english #fs-frm > input {
+    height: 2.5em;
+    padding: .3em;
+}
+
+main.english #fs-frm > input,
+main.english #fs-frm-inputs input,
+main.english #fs-frm-inputs select,
+main.english #fs-frm-inputs textarea
+{
+    direction: ltr;
+    font-family: MySecondFont;
 }
 
 /* ================================================================= */
