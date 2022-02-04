@@ -117,7 +117,7 @@
             </div>
         </div>
     </header>
-    <main>
+    <main class="project">
         <div id="first" class="opener-pic start">
             <div class="project">
                 <a id="language" href="project_en.html"></a>
@@ -126,6 +126,30 @@
                     <i class="fas fa-angle-up"></i>
                 </div>
             </div>
+            <form id="fs-frm" name="complaint-form" accept-charset="utf-8" action="https://formspree.io/f/mknyjvqz" method="post">
+                <fieldset id="fs-frm-inputs">
+                    <label for="full-name">نام کامل</label>
+                    <input type="text" name="name" id="full-name" placeholder="نام و نام خانوادگی" required="">
+                    <label for="email-address">ایمیل</label>
+                    <input type="email" name="_replyto" id="email-address" placeholder="email@domain.tld" required="">
+                    <label for="telephone">شماره تلفن (اختیاری)</label>
+                    <input type="telephone" name="telephone" id="telephone" placeholder="555-5555 (555)">
+                    <label for="department">حوزه</label>
+                    <select name="department" id="department" required="">
+                        <option value="" selected="" disabled="">انتخاب کنید</option>
+                        <option value="Dynamic">تحلیل سیالاتی</option>
+                        <option value="Fluid">تحلیل استاتیکی</option>
+                        <option value="Static">تحلیل دینامیکی</option>
+                        <option value="Combustion">تحلیل احتراق</option>
+                    </select>
+                    <label for="message">پیام</label>
+                    <textarea rows="6" name="message" id="message"
+                        placeholder="لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه"
+                        required=""></textarea>
+                    <input type="hidden" name="_subject" id="email-subject" value="Department Contact Form Submission">
+                </fieldset>
+                <input type="submit" value="ارسال پیام">
+            </form>
         </div>
         <footer id="foot">
             <div class="about-us">
