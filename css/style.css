@@ -1457,18 +1457,18 @@ main.english #fs-frm-inputs {
 #fs-frm-inputs input,
 #fs-frm-inputs select,
 #fs-frm-inputs textarea {
-    min-height: 2.5em;
     padding: .3em;
     margin: .4em 0;
     color: #1A374D;
+    min-height: 2.5em;
     border-radius: .3em;
     font-family: MyFourthFont;
     background-color: #EEF2FF;
     width: clamp(10em,80vw,25em);
     font-size: clamp(1.2rem,6vw,1.7rem);
     border: 1px solid hsla(0, 0%, 0%, 0.7);
-    text-shadow: .05em .05em .18em #1A374D;
     box-shadow: .2em .2em .7em hsl(0, 0%, 0%, .8);
+    text-shadow: .05em .05em .1em hsl(206, 50%, 20%, .3);
 }
 
 #fs-frm-inputs input:hover,
