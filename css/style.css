@@ -1457,6 +1457,7 @@ main.english #fs-frm-inputs {
 #fs-frm-inputs input,
 #fs-frm-inputs select,
 #fs-frm-inputs textarea {
+    min-height: 2.5em;
     padding: .3em;
     margin: .4em 0;
     color: #1A374D;
@@ -1465,8 +1466,8 @@ main.english #fs-frm-inputs {
     background-color: #EEF2FF;
     width: clamp(10em,80vw,25em);
     font-size: clamp(1.2rem,6vw,1.7rem);
-    text-shadow: .07em .07em .12em #1A374D;
     border: 1px solid hsla(0, 0%, 0%, 0.7);
+    text-shadow: .05em .05em .18em #1A374D;
     box-shadow: .2em .2em .7em hsl(0, 0%, 0%, .8);
 }
 
@@ -1495,7 +1496,7 @@ main.english #fs-frm-inputs {
 
 #fs-frm-inputs input::placeholder,
 #fs-frm-inputs textarea::placeholder {
-    color: #B1D0E0;
+    color: hsla(205, 100%, 6%, 0.25);
 }
 
 #fs-frm-inputs > select > * {
@@ -1514,7 +1515,7 @@ main.english #fs-frm-inputs {
     background-color: #EEF2FF;
     border: 1px solid #1A374D;
     font-size: clamp(1.2rem,6vw,1.7rem);
-    text-shadow: .07em .07em .15em #1A374D;
+    text-shadow: .05em .05em .18em #1A374D;
     transition: color .3s ease-in-out,
                 background-color .2s ease-in-out;
     box-shadow: .2em .2em .7em hsl(0, 0%, 0%, .8);
@@ -1525,7 +1526,7 @@ main.english #fs-frm-inputs {
     outline: none;
     color: #EEF2FF;
     background-color: #1B1B2F;
-    text-shadow: .07em .07em .15em #EEF2FF;
+    text-shadow: .05em .05em .18em #EEF2FF;
     border: 1px solid hsl(226, 100%, 97%, .2);
 }
 
