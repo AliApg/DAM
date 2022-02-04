@@ -1420,14 +1420,14 @@ main.project .opener-pic {
     flex-direction: column;
     justify-content: center;
     box-shadow: .7em .7em 3em #000;
-    border-top: .15em solid hsl(0, 0%, 50%);
-    border-left: .15em solid hsl(0, 0%, 50%);
+    border-top: .05em solid hsl(0, 0%, 50%);
+    border-left: .05em solid hsl(0, 0%, 50%);
     background-color: rgba(100, 100, 100, 0.25);
 }
 
 @supports (backdrop-filter: blur(5em)) {
     #fs-frm {
-        backdrop-filter: blur(.15em);
+        backdrop-filter: blur(.2em);
         background-color: hsla(0, 0%, 100%, 0.02);
     }
 }
@@ -1445,7 +1445,7 @@ main.project .opener-pic {
     font-family: MySecondFont;
     width: clamp(10em,80vw,25em);
     font-size: clamp(1.2rem,6vw,1.7rem);
-    text-shadow: .09em .09em .1em #000;
+    text-shadow: .09em .09em .12em #000;
 }
 
 #fs-frm-inputs input,
@@ -1459,7 +1459,7 @@ main.project .opener-pic {
     background-color: #EEF2FF;
     width: clamp(10em,80vw,25em);
     font-size: clamp(1.2rem,6vw,1.7rem);
-    text-shadow: .07em .07em .1em #1A374D;
+    text-shadow: .07em .07em .12em #1A374D;
     border: 1px solid hsla(0, 0%, 0%, 0.7);
     box-shadow: .2em .2em .7em hsl(0, 0%, 0%, .8);
 
@@ -1507,12 +1507,14 @@ main.project .opener-pic {
     font-size: clamp(1.2rem,6vw,1.7rem);
     transition: background-color .2s ease-in-out,
                 color  .3s ease-in-out;
+    text-shadow: .07em .07em .15em #1A374D;
     box-shadow: .2em .2em .7em hsl(0, 0%, 0%, .8);
 }
 
 #fs-frm > input:hover {
     color: #EEF2FF;
     background-color: #1B1B2F;
+    text-shadow: .07em .07em .15em #EEF2FF;
     border: 1px solid hsl(226, 100%, 97%, .2);
 }
 
