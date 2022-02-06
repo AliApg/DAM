@@ -1449,9 +1449,18 @@ main.project .opener-pic {
     text-shadow: .09em .09em .12em #000;
 }
 
-main.english #fs-frm-inputs {
+main.english #fs-frm-inputs,
+#fs-frm-inputs input:nth-of-type(2) {
     direction: ltr;
     font-family: MySecondFont;
+}
+
+#fs-frm-inputs input:nth-of-type(3) {
+    direction: ltr;
+}
+
+#fs-frm-inputs select {
+    cursor: pointer;
 }
 
 #fs-frm-inputs input,
